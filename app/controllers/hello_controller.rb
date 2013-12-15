@@ -16,15 +16,17 @@ class HelloController < ApplicationController
 	@twilio_client.account.calls.create(
 	:from => "+4972197795995",
 	:to => "+4915161003858",
-	:url => "localhost:3000/hello/twimlet"
+	:url => "http://tranquil-mesa-5151.herokuapp.com/hello/twimlet"
 	)
 
   end
 
   def twimlet
-
+	
+	
   	render xml: 
-  	"<Response></Response>"
+  	"<Response><Dial action='/forward?Dial=true' timeout='20'>+4972197795995</Dial></Response>"
+
 
   end
 
