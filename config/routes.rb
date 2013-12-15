@@ -7,11 +7,8 @@ OutboundCaller::Application.routes.draw do
   get "hello/responder"
   get "hello/outbound"
 
-  get "/hello/twimlet" do
-  Twilio::TwiML::Response.new do |r|
-  r.Say 'Hello Monkey'
-  end.text
-  end
+  get "/hello/twimlet", to: 'hello#twimlet'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
