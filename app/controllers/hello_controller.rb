@@ -12,24 +12,27 @@ class HelloController < ApplicationController
 	twilio_phone_number = "+4915161003858"
  
 	@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+
  
 	@twilio_client.account.calls.create(
+	:application_sid => 'AP79b6c85531f1aafaf6f8cfcde7f35aa3',
 	:from => "+4972197795995",
-	:to => "+4915161003858",
-	:url => "http://tranquil-mesa-5151.herokuapp.com/hello/twimlet"
+	:to => "+4915161003858"
+	
 	)
+
+
+
 
   end
 
   def twimlet
-	
-	
-  	render xml: 
-  	"<Response><Dial action='/forward?Dial=true' timeout='20'>+4972197795995</Dial></Response>"
 
+  		  render xml:
+          "<Response><Dial action='/forward?Dial=true' timeout='20'>+4915161003862</Dial></Response>"
 
   end
-
+ 
 
   def responder
 
