@@ -27,8 +27,7 @@ class HelloController < ApplicationController
   def twimlet
 
   		  render xml:
-          "<Response><Dial action='/forward?Dial=true' timeout='20'>+4917664076045</Dial></Response>"
-          redirect_to '/'
+          "<Response><Say>I love you twilio</Say></Response>"
   end
 
 
