@@ -28,7 +28,7 @@ class HelloController < ApplicationController
 
   		  render xml:
           "<Response><Dial action='/forward?Dial=true' timeout='20'>+4917664076045</Dial></Response>"
-
+          redirect_to '/'
   end
 
 
