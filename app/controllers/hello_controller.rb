@@ -6,6 +6,7 @@ class HelloController < ApplicationController
   end
 
   def outbound
+  	@company = 123
 
 	twilio_sid = "AC8b529193ecf93b1132e81e62009dfa02"
 	twilio_token = "3381411d6ff5d816d1b02f8d9d9c0e12"
@@ -15,23 +16,22 @@ class HelloController < ApplicationController
 
  
 	@twilio_client.account.calls.create(
-	:application_sid => 'AP79b6c85531f1aafaf6f8cfcde7f35aa3',
+	:url => "http://tranquil-mesa-5151.herokuapp.com/hello/twimlet.xml",
 	:from => "+4972197795995",
 	:to => "+4915161003858"
 	
 	)
-
-
-
 
   end
 
   def twimlet
 
   		  render xml:
-          "<Response><Dial action='/forward?Dial=true' timeout='20'>+4915161003862</Dial></Response>"
+          "<Response><Dial action='/forward?Dial=true' timeout='20'>+4917664076045</Dial></Response>"
 
   end
+
+
  
 
   def responder

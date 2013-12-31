@@ -47,4 +47,3 @@ gem 'debugger', group: [:development, :test]
 
 gem 'twilio-ruby'
 gem 'sinatra', '~> 1.4.4'
-gem 'podio'
