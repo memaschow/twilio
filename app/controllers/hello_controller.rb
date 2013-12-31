@@ -26,8 +26,7 @@ class HelloController < ApplicationController
 
   def twimlet
 
-  		  render xml:
-          "<Response><Say>I love you twilio</Say></Response>"
+  		  render xml: "<Response><Say>I love you twilio</Say></Response>"
   end
 
 
